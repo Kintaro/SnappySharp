@@ -42,9 +42,12 @@
     <Compile Include="Util\Bits.cs" />
     <Compile Include="SnappyDecompressor.cs" />
     <Compile Include="UncheckedByteArraySink.cs" />
+    <Compile Include="Writer\SnappyDecompressionValidator.cs" />
+    <Compile Include="Writer\IWriter.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Util\" />
+    <Folder Include="Writer\" />
   </ItemGroup>
 </Project>

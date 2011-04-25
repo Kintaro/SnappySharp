@@ -1,4 +1,5 @@
 using System.IO;
+using SnappySharp.Writer;
 
 namespace SnappySharp
 {
@@ -90,7 +91,7 @@ namespace SnappySharp
 		/// <typeparam name='Writer'>
 		/// 	The 1st type parameter.
 		/// </typeparam>
-		public bool Step<Writer> (Writer writer)
+		public bool Step (IWriter writer)
 		{
 			return true;
 		}

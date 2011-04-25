@@ -1,6 +1,6 @@
 using System;
 
-namespace SnappySharp
+namespace SnappySharp.Util
 {
 	/// <summary>
 	/// 	Some bit-manipulation functions.
