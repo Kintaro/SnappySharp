@@ -17,6 +17,14 @@ namespace SnappySharp.Util
 		};
 		
 		/// <summary>
+		/// 	The word mask.
+		/// </summary>
+		internal static readonly uint[] wordMask = new uint[]
+		{
+			0u, 0xFFu, 0xFFFFu, 0xFFFFFFu, 0xFFFFFFFFu
+		};
+		
+		/// <summary>
 		/// 	Return floor(log2(n)) for positive integer n.  Returns -1 iff n == 0.
 		/// </summary>
 		/// <returns>
