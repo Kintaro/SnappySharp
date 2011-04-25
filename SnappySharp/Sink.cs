@@ -6,14 +6,7 @@ namespace SnappySharp
 	/// 	Sink.
 	/// </summary>
 	public abstract class Sink
-	{
-		/// <summary>
-		/// 	Initializes a new instance of the <see cref="SnappySharp.Sink"/> class.
-		/// </summary>
-		public Sink ()
-		{
-		}
-		
+	{		
 		/// <summary>
 		/// 	Gets the append buffer.
 		/// </summary>

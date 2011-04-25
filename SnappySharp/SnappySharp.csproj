@@ -40,6 +40,8 @@
     <Compile Include="ByteBuffer.cs" />
     <Compile Include="Api.cs" />
     <Compile Include="Util\Bits.cs" />
+    <Compile Include="SnappyDecompressor.cs" />
+    <Compile Include="UncheckedByteArraySink.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
