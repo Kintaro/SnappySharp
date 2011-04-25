@@ -33,7 +33,7 @@ namespace SnappySharp
 		/// <param name='n'>
 		/// 	N.
 		/// </param>
-		public abstract void Append (byte[] bytes, int n);
+		public abstract void Append (MemoryStream bytes, int n);
 	}
 }
 

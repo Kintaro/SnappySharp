@@ -40,8 +40,14 @@ namespace SnappySharp
 		/// <param name='n'>
 		/// 	N.
 		/// </param>
-		public override void Append (byte[] bytes, int n)
+		public override void Append (MemoryStream bytes, int n)
 		{
+			if (bytes.Position != this.destination.Position)
+			{
+				byte[] buffer = new byte[n];
+				bytes.Read (buffer, 0, n);	
+				this.destination.Write (buffer, 0, n);
+			}
 			this.destination.Seek (n, SeekOrigin.Current);
 		}
 		
@@ -57,7 +63,7 @@ namespace SnappySharp
 		/// <param name='scratch'>
 		/// 	Scratch.
 		/// </param>
-		public override MemoryStream GetAppendBuffer (int length, System.IO.MemoryStream scratch)
+		public override MemoryStream GetAppendBuffer (int length, MemoryStream scratch)
 		{
 			return this.destination;
 		}
