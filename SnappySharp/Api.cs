@@ -4,6 +4,15 @@ namespace SnappySharp
 {
 	public static class Api
 	{
+		/// <summary>
+		/// 	Constant max hash table bits.
+		/// </summary>
+		public const int MaxHashTableBits = 14;
+		/// <summary>
+		/// 	Constant max hash table size.
+		/// </summary>
+		public const int MaxHashTableSize = 1 << MaxHashTableBits;
+		
 		public enum Status 
 		{
 			OK = 0,

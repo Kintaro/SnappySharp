@@ -45,6 +45,7 @@
     <Compile Include="Writer\SnappyDecompressionValidator.cs" />
     <Compile Include="Writer\IWriter.cs" />
     <Compile Include="Writer\SnappyArrayWriter.cs" />
+    <Compile Include="WorkingMemory.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

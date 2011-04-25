@@ -41,6 +41,7 @@ namespace SnappySharp.Writer
 				return false;
 			for (int i = 0; i < length; ++i)
 				this.destination[this.op - offset + i] = this.destination[this.op + i];
+			this.op += length;
 			return true;
 		}
 	

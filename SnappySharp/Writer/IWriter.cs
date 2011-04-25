@@ -1,4 +1,4 @@
-using System;
+using System.IO;
 
 namespace SnappySharp.Writer
 {
@@ -33,7 +33,7 @@ namespace SnappySharp.Writer
 		/// <param name='allowFastpath'>
 		/// 	If set to <c>true</c> allow fastpath.
 		/// </param>
-		bool Append (long pointer, int length, bool allowFastpath);
+		bool Append (MemoryStream pointer, int length, bool allowFastpath);
 		/// <summary>
 		/// 	Appends from self.
 		/// </summary>
