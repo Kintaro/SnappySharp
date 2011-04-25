@@ -1,4 +1,4 @@
-using System;
+using System.IO;
 
 namespace SnappySharp.Writer
 {
@@ -25,7 +25,7 @@ namespace SnappySharp.Writer
 			return this.produced <= this.expected;
 		}
 
-		public bool Append (long pointer, int length, bool allowFastpath)
+		public bool Append (MemoryStream pointer, int length, bool allowFastpath)
 		{
 			this.produced += length;
 			return this.produced <= this.expected;

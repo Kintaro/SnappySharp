@@ -1,4 +1,4 @@
-using System;
+using System.IO;
 
 namespace SnappySharp.Writer
 {
@@ -34,12 +34,24 @@ namespace SnappySharp.Writer
 		#region IWriter implementation
 		public bool AppendFromSelf (int offset, int length)
 		{
-			throw new System.NotImplementedException ();
+			int spaceLeft = this.limit - this.op;
+			if (this.op <= offset - 1u)
+				return false;
+			if (spaceLeft < length)
+				return false;
+			for (int i = 0; i < length; ++i)
+				this.destination[this.op - offset + i] = this.destination[this.op + i];
+			return true;
 		}
 	
-		public bool Append (long pointer, int length, bool allowFastpath)
+		public bool Append (MemoryStream pointer, int length, bool allowFastpath)
 		{
-			throw new System.NotImplementedException ();
+			int spaceLeft = this.limit - this.op;
+			if (spaceLeft < length)
+				return false;
+			pointer.Read (this.destination, this.op, length);
+			this.op += length;
+			return true;
 		}
 	
 		public bool CheckLength ()
